@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity"
+                android:background="@android:color/darker_gray">
+
+    <TextView
+        android:text="@string/first_number_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstNumberTextView"
+        android:layout_alignTop="@+id/firstNumberEditText"
+        android:layout_alignRight="@+id/secondNumberTextView"
+        android:layout_alignEnd="@+id/secondNumberTextView"
+        android:textColor="@android:color/holo_red_dark"
+        android:minHeight="50dp"
+        android:singleLine="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/firstNumberEditText"
+        android:layout_above="@+id/secondNumberEditText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="82dp"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:text="@string/second_number_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondNumberTextView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/holo_red_dark"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/secondNumberEditText"
+        android:layout_alignTop="@+id/secondNumberTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:id="@+id/buttonsLinearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_button_prompt"
+            android:id="@+id/addButton"
+            android:minWidth="50dp"
+            android:background="@android:color/holo_orange_light"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtract_button_prompt"
+            android:id="@+id/subtractButton"
+            android:minWidth="50dp"
+            android:background="@android:color/holo_green_light"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/multiply_button_prompt"
+            android:id="@+id/multiplyButton"
+            android:minWidth="50dp"
+            android:background="@android:color/holo_blue_light"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divide_button_prompt"
+            android:id="@+id/divideButton"
+            android:minWidth="50dp"
+            android:background="@android:color/holo_purple"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_button_prompt"
+            android:id="@+id/resetButton"
+            android:minWidth="50dp"
+            android:background="@android:color/holo_red_light"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
